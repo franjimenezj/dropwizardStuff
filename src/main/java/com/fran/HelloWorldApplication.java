@@ -1,10 +1,10 @@
-package com.fran.helloworld;
+package com.fran;
 
 import io.dropwizard.Application;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
-import com.fran.helloworld.resources.HelloWorldResource;
-import com.fran.helloworld.health.TemplateHealthCheck;
+import com.fran.resources.HelloWorldResource;
+import com.fran.health.TemplateHealthCheck;
 
 public class HelloWorldApplication extends Application<HelloWorldConfiguration> {
     public static void main(String[] args) throws Exception {
@@ -33,6 +33,7 @@ public class HelloWorldApplication extends Application<HelloWorldConfiguration> 
                 new TemplateHealthCheck(configuration.getTemplate());
         environment.healthChecks().register("template", healthCheck);
         environment.jersey().register(resource);
+
     }
 
 }

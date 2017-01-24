@@ -1,4 +1,4 @@
-package com.fran.helloworld.health;
+package com.fran.health;
 
 import com.codahale.metrics.health.HealthCheck;
 

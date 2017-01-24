@@ -19,7 +19,7 @@
               <transformers>
                 <transformer />
                 <transformer>
-                  <mainClass>com.fran.helloworld.HelloWorldApplication</mainClass>
+                  <mainClass>com.fran.HelloWorldApplication</mainClass>
                 </transformer>
               </transformers>
             </configuration>

@@ -1,7 +1,6 @@
-package com.fran.helloworld.resources;
+package com.fran.resources;
 
-import com.fran.helloworld.api.Saying;
-import com.codahale.metrics.annotation.Timed;
+import com.fran.api.Saying;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -26,7 +25,6 @@ public class HelloWorldResource {
     }
 
     @GET
-    @Timed
     public Saying sayHello(@QueryParam("name") Optional<String> name) {
         final String value = String.format(template, name.orElse(defaultName));
         return new Saying(counter.incrementAndGet(), value);

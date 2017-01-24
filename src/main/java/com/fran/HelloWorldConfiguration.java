@@ -1,10 +1,10 @@
-package com.fran.helloworld;
+package com.fran;
 
 import io.dropwizard.Configuration;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import org.hibernate.validator.constraints.NotEmpty;
 
-public class HelloWorldConfiguration extends Configuration {
+class HelloWorldConfiguration extends Configuration {
     @NotEmpty
     private String template;
 
@@ -22,7 +22,7 @@ public class HelloWorldConfiguration extends Configuration {
     }
 
     @JsonProperty
-    public String getDefaultName() {
+    String getDefaultName() {
         return defaultName;
     }
 
